@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :item do
-    name "MyString"
-    cost 1.5
+    name Faker::Commerce.product_name
+    cost Faker::Number.decimal(2)
   end
 end
