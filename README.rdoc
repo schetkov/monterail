@@ -1,28 +1,16 @@
-== README
+== Monterail test task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the test task for Monterail company, made with RoR & ReactOnRails gem.
+It uses OmniAuth-github authentication, that will be looking for you account name || username.
+You can check what it looks like http://monterail-meals-test.herokuapp.com/ (yeah, I'm a poor designer)
 
-Things you may want to cover:
+== Installation
 
-* Ruby version
+Make sure you have relevant version of NPM and node before installing.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Download app with *git clone git@github.com:schetkov/monterail.git*
+2. Move to created directory *cd monterail*
+3. Exec *bundle && npm install*
+4. Use *foreman* to start application: *foreman start -f Procfile.dev* OR move to client folder, execute npm run build:development and then rails s.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
