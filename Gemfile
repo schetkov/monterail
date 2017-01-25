@@ -15,6 +15,7 @@ gem "react_on_rails", "~> 6"
 gem 'omniauth-github'
 gem 'slim-rails'
 gem 'bootstrap-sass'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'

@@ -1,0 +1,93 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.menu-container{
+  height: 400px;
+  width: 100%;
+}
+
+.restaurant{
+  margin: 0 auto;
+  font-size: 16px;
+  & span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.choose-restaurant{
+  & .choose-restaurant-form{
+  text-align: center;
+  padding: 15px;
+    & * {
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+.restaurant-chosen{
+  margin: 0 auto;
+  font-size: 16px;
+  & span {
+  font-size: 20px;
+  font-weight: 600;
+  }
+}
+
+.make-order-form{
+  margin: 15px;
+  line-height: 30px;
+  text-align: center;
+    & *{
+      margin: 0 15px;
+    }
+    & .order-button-container{
+    margin: 15px 0;
+    }
+}
+
+.todays-order{
+  & > div {
+  text-align: center;
+    & span {
+    font-size: 20px;
+    font-weight: 600;
+    }
+  }
+}
+
+.order-total{
+  margin-top: 20px;
+}
+
+.order-list-header span {
+  display: inline-block;
+  width: 50%;
+  padding: 5px 10px;
+}
+
+.order-item{
+  border: 1px solid black;
+  border-radius: 5px;
+  & .order-item-name{
+    border-right: 1px solid black;
+  }
+}
+
+.arch-item-table-header{
+  margin-top: 25px;
+  border-bottom: 1px solid black;
+}
+
+.arch-item-cost{
+  border-right: none!important;
+}
+
+.arch-item{
+  & div {
+  display: inline-block;
+  border-right: 1px solid black
+  }
+}
