@@ -1,8 +1,14 @@
 import ReactOnRails from 'react-on-rails';
 
-import HelloWorld from '../components/HelloWorld';
+import Menu from '../components/Menu';
+import MenuStore from '../store/MenuStore';
+import App from './App';
 
-// This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
-  HelloWorld,
+  Menu,
+  App,
+});
+
+ReactOnRails.registerStore({
+  MenuStore,
 });
