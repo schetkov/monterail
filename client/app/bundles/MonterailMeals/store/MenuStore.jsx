@@ -5,11 +5,8 @@ import rootReducer from '../reducers';
   const middleware = thunk;
   let enhancer;
 
-  let devToolsExtension = window.devToolsExtension();
-
   enhancer = compose(
-    applyMiddleware(middleware),
-    devToolsExtension,
+    applyMiddleware(middleware)
   );
 
   const MenuStore = (railsProps) => (
