@@ -3,6 +3,7 @@ require 'rails_helper'
 describe "User" do
 
   let(:user) { FactoryGirl.create(:user) }
+  let(:item) { FactoryGirl.create(:item) }
 
   subject { user }
 
@@ -41,6 +42,13 @@ describe "User" do
       invalid_user.save
       expect(invalid_user).to_not be_valid
   	end
+  end
+
+  describe "Adding related objects" do
+    it "Adding new OrderItem" do
+      user.items << item
+      expect([user.items]).to be_equal([item])
+    end
   end
 
 end

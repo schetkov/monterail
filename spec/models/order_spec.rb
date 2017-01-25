@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Item" do
+describe "Order" do
 
   let(:order) { FactoryGirl.create(:order) }
 
