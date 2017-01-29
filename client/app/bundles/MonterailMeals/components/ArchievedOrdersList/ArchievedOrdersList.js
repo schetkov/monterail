@@ -1,24 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import ArchievedOrderItem from './ArchievedOrderItem';
+import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-  return {
-    archievedOrders: state.order.archievedOrders
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-
+    return {
+      archievedOrders: state.order.archievedOrders,
+    }
   }
-}
 
 class ArchievedOrdersList extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render () {
 
@@ -41,10 +31,11 @@ class ArchievedOrdersList extends React.Component {
             <span> Total cost </span>
           </div>
         </div>
-        { archievedOrders.map(archItem => <ArchievedOrderItem item={archItem} key={`archItem` + archItem.id} />) }
+        { archievedOrders.map(archItem => <ArchievedOrderItem item={archItem} key={`archItem` + archItem.date} />) }
       </div>
     );
-    }
+  }
+
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ArchievedOrdersList);
+export default connect (mapStateToProps)(ArchievedOrdersList);

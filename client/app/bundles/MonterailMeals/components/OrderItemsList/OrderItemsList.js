@@ -9,11 +9,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-  };
-};
-
 class OrderItemsList extends React.Component {
 
   constructor(props) {
@@ -41,4 +36,4 @@ class OrderItemsList extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(OrderItemsList);
+export default connect(mapStateToProps)(OrderItemsList);

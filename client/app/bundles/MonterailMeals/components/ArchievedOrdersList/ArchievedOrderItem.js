@@ -1,12 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 
 class ArchievedOrderItem extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render () {
 
@@ -29,6 +24,7 @@ class ArchievedOrderItem extends React.Component {
       </div>
     );
   }
+
 }
 
 export default ArchievedOrderItem;

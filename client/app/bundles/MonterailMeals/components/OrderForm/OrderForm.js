@@ -23,9 +23,6 @@ class OrderForm extends React.Component {
     this.state = { orderName: '', orderCost: 0 };
   }
 
-  componentWillMount() {
-  }
-
   updateOrderName(name) {
     this.setState({ orderName: name });
   };

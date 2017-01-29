@@ -9,6 +9,7 @@ const mapStateToProps = (state) => {
     restaurant: state.restaurant,
     order: state.order.currentOrder,
     meal: state.order.orderedItem,
+    knownRestaurants: state.known_restaurants,
   };
 };
 
@@ -33,7 +34,7 @@ class Restaurant extends React.Component {
   };
 
   render () {
-    let { restaurant, createRestaurant, orderItems, order, meal} = this.props;
+    let { restaurant, createRestaurant, orderItems, order, meal, knownRestaurants} = this.props;
     let { resName } = this.state;
     if (restaurant) {
       return (
@@ -63,8 +64,12 @@ class Restaurant extends React.Component {
             <input
                 id="resName"
                 type="text"
+                list="restaurantsNames"
                 onChange={(e) => this.updateResName(e.target.value)}
               />
+              <datalist id="restaurantsNames">
+                { knownRestaurants.map(restaurant => <option value={restaurant.name} key={restaurant.name}/>) }
+              </datalist>
             <div className="btn btn-primary" onClick={()=> createRestaurant(resName)}> Select restaurant </div>
           </div>
         </div>

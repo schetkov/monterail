@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
   respond_to :json
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant = Restaurant.find_or_create_by(restaurant_params)
     respond_to do |format|
       if @restaurant.save
         format.json {

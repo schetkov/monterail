@@ -12,6 +12,8 @@
 /db/*.sqlite3-journal
 #Ignore YML files
 /config/database.yml
+#Ignore byebug history
+.byebug_history
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep

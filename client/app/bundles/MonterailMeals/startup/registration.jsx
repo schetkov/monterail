@@ -3,6 +3,7 @@ import ReactOnRails from 'react-on-rails';
 import Menu from '../components/Menu';
 import MenuStore from '../store/MenuStore';
 import App from './App';
+import ApplicationContainer from '../components/ApplicationContainer';
 import OrderForm from '../components/OrderForm';
 import Restaurant from '../components/Restaurant';
 import OrderItemsList from '../components/OrderItemsList';
@@ -14,6 +15,7 @@ import ArchievedOrdersItem from '../components/ArchievedOrdersList';
 ReactOnRails.register({
   Menu,
   App,
+  ApplicationContainer,
   OrderForm,
   Restaurant,
   OrderItemsList,
