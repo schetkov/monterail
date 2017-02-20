@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   delete 'restaurants/destroy/:id', to: 'restaurants#destroy'
   put 'orders/:id', to: 'orders#update'
   post 'items', to: 'items#create'
-  
+
 end

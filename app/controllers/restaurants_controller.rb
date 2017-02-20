@@ -14,17 +14,6 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def destroy
-    respond_to do |format|
-      @restaurant = Restaurant.find(params[:id])
-      if @restaurant.destroy
-        format.json {
-          render :json => '200'
-        }
-      end
-    end
-  end
-
   private
 
   def restaurant_params

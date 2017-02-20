@@ -18,6 +18,8 @@
 /log/*
 !/log/.keep
 /tmp
+#ignore .rvmrc file
+.rvmrc
 # React on Rails
 npm-debug.log*
 node_modules

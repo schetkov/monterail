@@ -27,6 +27,23 @@ require 'capybara/rspec'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+OmniAuth.config.test_mode = true
+omniauth_hash = { 'provider' => 'github',
+                  'uid' => '12345',
+                  'info' => {
+                      'name' => 'Valeriy Schetko',
+                      'email' => 'shchetkovaleriy@gmail.com',
+                      'nickname' => 'vschetko'
+                  },
+                  'extra' => {'raw_info' =>
+                                  { 'location' => 'Wroclaw',
+                                    'gravatar_id' => '123456789'
+                                  }
+                  }
+}
+ 
+OmniAuth.config.add_mock(:github, omniauth_hash)
+
 RSpec.configure do |config|
   # Ensure that if we are running js tests, we are using latest webpack assets
   # This will use the defaults of :js and :server_rendering meta tags

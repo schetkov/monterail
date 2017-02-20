@@ -47,7 +47,7 @@ describe "User" do
   describe "Adding related objects" do
     it "Adding new OrderItem" do
       user.items << item
-      expect([user.items]).to be_equal([item])
+      expect(user.items.last).to eq item
     end
   end
 
