@@ -20,7 +20,7 @@ class Menu extends React.Component {
     let {restaurant} = this.props;
     return (
       <div>
-        <div className="menu-for-today">
+        <div className="menu-for-today col-xs-12 col-sm-6 col-sm-offset-3">
           <Restaurant />
           { restaurant? <OrderForm /> : null }
         </div>

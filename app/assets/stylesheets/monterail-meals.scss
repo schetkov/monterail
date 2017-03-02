@@ -1,9 +1,75 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* {
+  font-family:"Book Antiqua", Palatino, serif;
+}
+
+body {
+  background-image:  url(asset-path('main-background.jpg'));
+}
+
+.flashes {
+  z-index: 999999;
+}
+
+.no-padding {
+  padding: 0!important;
+}
+
+.header-row {
+  padding-top: 15px;
+  & .flashes {
+    position: absolute;
+    top: 30px;
+    left: 65%;
+    width: 35%;
+  }
+  & .title {
+    & > * {
+      display: inline-block;
+    }
+    & .header-title {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+    & .monterail-image {
+    width: 50px;
+    & img {
+      width: 100%;
+      }
+    }
+  }
+  & .sign-in-out{
+    & > * {
+      float: right;
+    }
+    & .current-user {
+      display: inline-block;
+      margin: 0 15px;
+      font-size: 20px;
+    }
+    & a {
+    color: white;
+    font-size: 16px;
+    }
+    & a:hover {
+    text-decoration: none;
+    }
+  }
+}
+
+.no-auth {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  text-align: center;
+}
+
 .menu-container{
-  height: 400px;
-  width: 100%;
+  min-height: 400px;
 }
 
 .restaurant{
@@ -28,7 +94,7 @@
 }
 
 .restaurant-chosen{
-  margin: 0 auto;
+  margin: 15px auto;
   font-size: 16px;
   & span {
   font-size: 20px;
@@ -76,16 +142,64 @@
   }
 }
 
-.arch-item-table-header{
-  margin-top: 25px;
-  border-bottom: 1px solid black;
+.arch-item-table {
+  background-image: url(asset-path('paper-background.jpg'));
+  background-repeat: repeat;
+  box-shadow: 8px 10px 5px 0px rgba(0,0,0,0.75);
+  height: 450px;
+  overflow-y: auto;
+  & .arch-item-table-header{
+    padding: 0;
+    margin-top: 25px;
+    border-bottom: 1px solid black;
+  }
+  & .selected-archieved-order {
+    padding: 0;
+    background-color: rgba(25, 162, 224, .7);
+    color: white;
+  }
 }
 
 .arch-item-cost{
   border-right: none!important;
 }
 
+.arch-orders {
+  & .expanded-archieved-order-item {
+    box-shadow: 8px 10px 5px 0px rgba(0,0,0,0.75);
+    height: 450px;
+    background-image: url(asset-path('paper-background-2.jpg'));
+  }
+  & .expanded-arch-item {
+    margin-top: 25px;
+    overflow: hidden;
+    & .expanded-items-table-header {
+      overflow:hidden;
+      border-bottom: 1px solid black;
+    }
+    & .expanded-arch-item-table {
+      overflow-y: auto;
+      & .expanded-arch-item-row {
+        & > .expanded-item-name {
+          border-right: 1px solid black;
+        }
+      }
+    }
+  }
+  & .expanded-arch-item-table {
+    height: 350px;
+  }
+  & .expanded-total {
+    font-size: 20px;
+    & .expanded-order-total {
+      text-align: right;
+      font-weight: 600;
+    }
+  }
+}
+
 .arch-item{
+  padding: 0;
   & div {
   display: inline-block;
   border-right: 1px solid black

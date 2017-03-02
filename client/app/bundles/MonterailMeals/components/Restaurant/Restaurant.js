@@ -40,8 +40,8 @@ class Restaurant extends React.Component {
       return (
         <div className='today-restaurant'>
           <div>
-            <div className="restaurant-chosen"> Today's restaurant is <span className="restaurant-name">{restaurant.name} </span>. 
-            { meal? `Today your order was ${meal.name} for ${meal.cost} $` :  `Please make your order!` }
+            <div className="restaurant-chosen"> Today's restaurant is <span className="restaurant-name"> { restaurant.name } </span>
+            { meal? ` and your order is ${meal.name} for ${meal.cost} $` :  `. Please make your order!` }
 
             </div>
           </div>

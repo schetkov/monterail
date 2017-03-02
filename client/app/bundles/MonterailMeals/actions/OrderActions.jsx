@@ -42,12 +42,12 @@ export function changeOrderStatus(orderId, orderStatus) {
       url : url,
       type : 'PUT',
       dataType: 'json',
-    data: {status: parseInt(orderStatus)},
-    success : function(data, status, xhr) {
-        dispatch(orderStatusUpdatedSuccessfully(data));
-      },
+      data: {status: parseInt(orderStatus)},
+      success : function(data, status, xhr) {
+          dispatch(orderStatusUpdatedSuccessfully(data));
+        },
       error : function(xhr, data) {
-        window.alert("Sorry, we can't change order status now. Please try again later");
+        window.alert($.parseJSON(xhr.responseText).error);
       }
     });
   }

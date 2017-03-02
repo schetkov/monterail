@@ -28,7 +28,8 @@ class OrderStatusSelect extends React.Component {
   }
 
   change(status){
-    this.setState({ orderStatus: status });
+    let { initialStatus }= this.props
+    if ( status > this.findStatus(initialStatus)) { this.setState({ orderStatus: status }); }
     this.props.changeOrderStatus(this.props.orderId, status)
   }
 

@@ -11,6 +11,7 @@ import OrderItem from '../components/OrderItem';
 import OrderStatusSelect from '../components/Restaurant';
 import ArchievedOrdersList from '../components/ArchievedOrdersList';
 import ArchievedOrdersItem from '../components/ArchievedOrdersList';
+import ExpandedArchievedOrderItem from '../components/ArchievedOrdersList';
 
 ReactOnRails.register({
   Menu,

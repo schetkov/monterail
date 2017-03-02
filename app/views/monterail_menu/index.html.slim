@@ -1,9 +1,6 @@
-<h1>Monterail Meal Ordering System</h1>
 - if current_user
-  = link_to "Sign out", signout_path, method: "delete"
   = redux_store("MenuStore", props: @store_init_props)
   = react_component("App", props: @page_init_props )
 - else
-  = link_to "Sign in with Github", "/auth/github"
-
-
+  .no-auth
+    h1 You have to Sign In via Github in order to proceed!

@@ -1,0 +1,22 @@
+.header-row
+  .flashes
+    - flash.each do |key, value|
+      div class=("alert alert-#{key} alert-dismissible") 
+        button.close aria-hidden="true" data-dismiss="alert" type="button"  ×
+        = value
+  .title.col-xs-12.col-sm-6.float-left
+    .monterail-image
+      = image_tag "monterail-logo.png"
+    .header-title Meals ordering system
+  .sign-in-out.col-xs-12.col-sm-6.float-right
+    - if !current_user
+      .btn.btn-primary
+        = link_to "Sign in with Github", "/auth/github"
+    - else
+      .btn.btn-danger
+        = link_to "Sign out", signout_path
+      .current-user
+        | Hello, #{current_user.name}!
+.clearfix
+javascript:
+  $(".alert").fadeOut(5000);

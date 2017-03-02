@@ -54,6 +54,7 @@ class OrderForm extends React.Component {
                 id="orderCost"
                 type="number"
                 pattern="[0-9]+([\.,][0-9]+)?" step="0.01"
+                min="0"
                 placeholder="Meal cost"
                 onChange={(e) => this.updateOrderCost(e.target.value)}
               />
