@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
 
   # RELATIONS
-  has_many :items
+  has_many :items, dependent: :destroy
   belongs_to :restaurant
 
   #VALIDATIONS

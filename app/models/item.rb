@@ -6,5 +6,6 @@ class Item < ActiveRecord::Base
 
   #VALIDATIONS
   validates :name, :cost, presence: true
-
+  validates :cost, numericality: { greater_than: 0 }
+  validates :name, length: { min: 3 }
 end

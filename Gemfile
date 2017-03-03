@@ -24,6 +24,7 @@ group :development, :test do
   gem 'faker'
   gem 'better_errors'
   gem 'capybara'
+  gem 'bullet'
 end
 
 group :development do
